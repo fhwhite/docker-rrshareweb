@@ -1,1 +1,1 @@
-:whale: Dockerfiles for [rrshareweb](http://app.rrysapp.com/)
+:whale: Dockerfiles for [rrshareweb](http://app.rrysapp.com/) with [glibc](https://github.com/sgerrand/alpine-pkg-glibc)
