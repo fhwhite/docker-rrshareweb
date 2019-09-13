@@ -27,8 +27,9 @@ RUN set -ex \
     && apk del .build-deps \
     && rm -rf /var/cache/apk
 
-ENV PORT 3001 
+ENV PATH /etc/rrshareweb:$PATH
+ENV PORT 3001
 
 EXPOSE $PORT
 
-CMD ["rrshareweb]
+CMD ["rrshareweb"]
