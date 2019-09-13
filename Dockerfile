@@ -15,8 +15,8 @@ RUN set -ex \
     && apk add --no-cache --virtual .build-deps \
         wget \
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
-    && wget $GLIBC_URL \
-    && wget $GLIBC-BIN_URL \
+    && wget ${GLIBC_URL} \
+    && wget ${GLIBC-BIN_URL} \
     && apk add --no-cache \
         glibc-${GLIBC_VER}.apk \
 		glibc-bin-${GLIBC_VER}.apk \
@@ -27,7 +27,7 @@ RUN set -ex \
     && apk del .build-deps \
     && rm -rf /var/cache/apk
 
-ENV PORT  3001 
+ENV PORT 3001 
 
 EXPOSE $PORT
 
