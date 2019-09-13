@@ -19,11 +19,11 @@ RUN set -ex \
     && wget $GLIBCBIN_URL \
     && apk add --no-cache \
         glibc-${GLIBC_VER}.apk \
-		glibc-bin-${GLIBC_VER}.apk \
+	glibc-bin-${GLIBC_VER}.apk \
     && rm -rf glibc* \
-    && wget $RRSHARE_URL \
-    && tar zxvf rrshareweb_centos7.tar.gz -C /etc/ \
-    && rm -rf rrshareweb_centos7.tar.gz \
+    && wget -q -O /rrshareweb.tar.gz $RRSHARE_URL \
+    && tar zxvf /rrshareweb.tar.gz -C /etc/ \
+    && rm -rf /rrshareweb.tar.gz \
     && apk del .build-deps \
     && rm -rf /var/cache/apk
 
