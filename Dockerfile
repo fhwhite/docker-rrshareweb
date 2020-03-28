@@ -28,8 +28,7 @@ RUN set -ex \
     && rm -rf /var/cache/apk
 
 ENV PATH /etc/rrshareweb:$PATH
-ENV PORT 3001
 
-EXPOSE $PORT
+EXPOSE 3001
 
 CMD ["rrshareweb"]
