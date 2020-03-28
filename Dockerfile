@@ -2,7 +2,7 @@
 # Dockerfile for rrshareweb
 #
 
-FROM alpine:3.8
+FROM alpine:latest
 
 ENV GLIBC_VER 2.31-r0
 ENV GLIBC_URL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-${GLIBC_VER}.apk
