@@ -7,7 +7,7 @@ FROM alpine:latest
 ENV GLIBC_VER 2.31-r0
 ENV GLIBC_URL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-${GLIBC_VER}.apk
 ENV GLIBCBIN_URL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk
-ENV RRSHARE_URL http://appdown.rrys.tv/rrshareweb_centos7.tar.gz
+ENV RRSHARE_URL http://appdown.rrys.tv/rrshareweb_linux.tar.gz
 
 RUN set -ex \
     && apk add --no-cache --virtual .run-deps \
